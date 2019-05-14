@@ -1,8 +1,8 @@
 export const ADD_TODO = 'ADD_TODO';
-export function addTodo(info) {
-  console.log(info);
-  return {
-    type: ADD_TODO,
-    payload: info
-  };
+export function addTodo(newTodo) {
+    console.log(newTodo);
+    return {
+        type: ADD_TODO,
+        payload: newTodo
+    };
 }
