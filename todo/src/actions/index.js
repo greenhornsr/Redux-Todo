@@ -1,8 +1,8 @@
-export const FIRST_ACTION = 'FIRST_ACTION';
-export function firstAction(info) {
+export const ADD_TODO = 'ADD_TODO';
+export function addTodo(info) {
   console.log(info);
   return {
-    type: FIRST_ACTION,
+    type: ADD_TODO,
     payload: info
   };
 }

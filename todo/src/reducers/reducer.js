@@ -1,12 +1,15 @@
-import { FIRST_ACTION } from '../actions'
+import { ADD_TODO } from '../actions'
 
 const initialState = {
-        todos: {}
+        todos: [{
+            value: '',
+            completed: false,
+        }]
 }
 
 function reducer(state = initialState, action) {
     switch(action.type) {
-        case FIRST_ACTION:
+        case ADD_TODO:
             return {
                 ...state
             }
