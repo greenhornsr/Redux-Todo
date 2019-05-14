@@ -21,7 +21,12 @@ class TodoContainer extends React.Component{
 
     render(){
         return (
-            <>
+            <>  
+                <div>
+                    {this.props.todos.map((todo, index) =>{
+                        return  <h3 key={index}>{todo.value}</h3>
+                    })}
+                </div>
                 <div>
                     <input type='text' value={this.state.newTodo} onChange={this.handleChanges} placeholder="Add something to do!" />
                     <button onClick={this.addTodo}>Add More To Do</button>
