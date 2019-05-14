@@ -21,22 +21,22 @@ class TodoContainer extends React.Component{
 
     toggleTodo = id => {
         this.props.toggleTodo(id)
-        console.log(this.props)
+        // console.log(this.props)
     }
 
     render(){
         return (
             <>  
                 <div>
-                    {this.props.todos.map((todo, index) => {
-                        return  <h3 onClick={() => this.toggleTodo(index)} key={index}>{todo.value}</h3>
-                    })}
-                </div>
-                <div>
                     <form onSubmit={this.addTodo}>
                         <input type='text' value={this.state.newTodo} onChange={this.handleChanges} placeholder="Add something to do!" />
                         <button>Add More To Do</button>
                     </form>
+                </div>
+                <div>
+                    {this.props.todos.map((todo, index) => {
+                        return  <h3 onClick={() => this.toggleTodo(index)} key={index}>{todo.value}</h3>
+                    })}
                 </div>
             </>
         )
@@ -44,6 +44,7 @@ class TodoContainer extends React.Component{
 }
 
 const mapStateToProps = state => {
+    console.log(state)
     return {
         todos: state.todos
     };
