@@ -15,7 +15,7 @@ class TodoContainer extends React.Component{
 
     addTodo = e => {
         e.preventDefault();
-        this.props.addTodo(this.state.newMember);
+        this.props.addTodo(this.state.newTodo);
         this.setState({ newTodo: '' });
     };
 
@@ -23,7 +23,8 @@ class TodoContainer extends React.Component{
         return (
             <>
                 <div>
-
+                    <input type='text' value={this.state.newTodo} onChange={this.handleChanges} placeholder="Add something to do!" />
+                    <button onClick={this.addTodo}>Add More To Do</button>
                 </div>
             </>
         )
